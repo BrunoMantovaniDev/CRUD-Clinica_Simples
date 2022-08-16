@@ -43,7 +43,7 @@
             // 
             // EditarConsulta
             // 
-            this.EditarConsulta.Location = new System.Drawing.Point(115, 342);
+            this.EditarConsulta.Location = new System.Drawing.Point(121, 342);
             this.EditarConsulta.Name = "EditarConsulta";
             this.EditarConsulta.Size = new System.Drawing.Size(75, 23);
             this.EditarConsulta.TabIndex = 13;
@@ -52,7 +52,7 @@
             // 
             // DeletarConsulta
             // 
-            this.DeletarConsulta.Location = new System.Drawing.Point(295, 342);
+            this.DeletarConsulta.Location = new System.Drawing.Point(305, 342);
             this.DeletarConsulta.Name = "DeletarConsulta";
             this.DeletarConsulta.Size = new System.Drawing.Size(75, 23);
             this.DeletarConsulta.TabIndex = 12;
@@ -107,7 +107,7 @@
             // 
             // NovoConsulta
             // 
-            this.NovoConsulta.Location = new System.Drawing.Point(455, 342);
+            this.NovoConsulta.Location = new System.Drawing.Point(460, 342);
             this.NovoConsulta.Name = "NovoConsulta";
             this.NovoConsulta.Size = new System.Drawing.Size(75, 23);
             this.NovoConsulta.TabIndex = 8;
@@ -128,7 +128,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 408);
+            this.ClientSize = new System.Drawing.Size(648, 408);
             this.Controls.Add(this.EditarConsulta);
             this.Controls.Add(this.DeletarConsulta);
             this.Controls.Add(this.textBox1);

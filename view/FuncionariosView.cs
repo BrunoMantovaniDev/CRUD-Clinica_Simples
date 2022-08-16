@@ -25,10 +25,6 @@ namespace Clinica.View
         {
             InitializeComponent();
 
-
-           // this.listagem.DataSource = funcionarios;
-
-
             
             int x = 0;
 

@@ -110,7 +110,31 @@ namespace Clinica.DAO
 
         public object delete(object chave)
         {
-            throw new NotImplementedException();
+            Consulta consulta = (Consulta)chave;
+            BancodeDados bd = new BancodeDados();
+            MySqlConnection conn = bd.conectar();
+            MySqlCommand cmd = new MySqlCommand();
+
+            try
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = @"
+                    delete from consultas  
+                    where data=@data and hora=@hora
+                    ";
+                cmd.Prepare();
+               
+                cmd.Parameters.AddWithValue("@data", consulta.dataHora.ToString("yyyy-MM-dd"));
+                cmd.Parameters.AddWithValue("@hora", consulta.dataHora.ToString("HH:mm:ss"));
+                cmd.ExecuteNonQuery();
+
+                
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                throw ex;
+            }
+            return consulta;
         }
 
         public object read(object chave)

@@ -56,7 +56,12 @@ namespace Clinica.controller
 
         public void deletar(object objeto)
         {
-            throw new NotImplementedException();
+            Consulta consulta = (Consulta)objeto;
+
+            ConsultaDAO consultaDAO = new ConsultaDAO();
+            consultaDAO.delete(consulta);
+
+            new ConsultasView(consultaDAO.all()).Show();
         }
 
         public void listar()

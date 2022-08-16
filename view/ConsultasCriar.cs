@@ -45,12 +45,11 @@ namespace Clinica.View
             consulta.dataHora = dataHora;
             controller.criar(consulta);
 
-            DialogResult dialogResult = MessageBox.Show(" Consulta Agendada !!  Medico : " + consulta.medico + " Data / Hora : " + consulta.dataHora);
+            MessageBox.Show(" Consulta Agendada !!  Medico : " + medico +
+                            "\n Paciente : " + paciente +
+                            "\n Data / Hora : " + consulta.dataHora);
 
-            
-
-            controller.listar();
-            this.Close();
+           this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
