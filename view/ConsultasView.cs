@@ -93,7 +93,7 @@ namespace Clinica.View
                 this.Hide();
 
             }else{
-                MessageBox.Show("Exclusao não realizada !!!");
+                MessageBox.Show("Exclusao de consulta não realizada !!!");
                 ConsultaController controller = new ConsultaController();
                 controller.listar();
                 this.Hide();

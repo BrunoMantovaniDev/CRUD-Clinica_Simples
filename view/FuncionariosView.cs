@@ -122,9 +122,18 @@ namespace Clinica.View
             {
                 FuncionarioController controller = new FuncionarioController();
                 controller.deletar(funcionario);
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Exclusao não realizada !!!");
+                FuncionarioController controller = new FuncionarioController();
+                controller.listar();
+                this.Hide();
             }
 
-            this.Hide();
+            
+            
         }
     }
 }
