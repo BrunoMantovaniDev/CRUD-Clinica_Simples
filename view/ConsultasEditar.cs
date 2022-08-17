@@ -64,7 +64,6 @@ namespace Clinica.View
 
             this.Close();
             
-
         }
 
         private void dataHoraConsulta_ValueChanged(object sender, EventArgs e)

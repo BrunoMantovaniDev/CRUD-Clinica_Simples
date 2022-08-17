@@ -11,7 +11,7 @@ namespace Clinica.Model
 
         public int nroa { get; set; }
 
-        public decimal andar { get; set; }
+        public int andar { get; set; }
 
         public int capacidade { get; set; }
 

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Clinica.DAO
 {
@@ -45,12 +46,65 @@ namespace Clinica.DAO
 
         public object create(object objeto)
         {
-            throw new NotImplementedException();
+            
+            BancodeDados bd = new BancodeDados();
+            Ambulatorio ambulatorio = (Ambulatorio)objeto;
+            MySqlConnection conn = bd.conectar();
+            MySqlCommand cmd = new MySqlCommand();
+
+            try
+            {
+                cmd.Connection = conn;
+                cmd.CommandText =  @"INSERT INTO ambulatorios
+                    (andar, capacidade) 
+                    VALUES(@andar,@capacidade)
+                    ";
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@andar", ambulatorio.andar);
+                cmd.Parameters.AddWithValue("@capacidade", ambulatorio.capacidade);
+                Console.WriteLine(cmd.Parameters[0].Value.ToString());
+                cmd.ExecuteNonQuery();
+
+
+                int id = int.Parse(cmd.LastInsertedId.ToString());
+                ambulatorio.nroa = id;
+
+
+                MessageBox.Show("Novo Ambulatorio inserido com Sucesso");
+            }
+            catch
+            {
+                throw;
+            }
+            return ambulatorio;
         }
 
         public object delete(object chave)
         {
-            throw new NotImplementedException();
+
+
+            Ambulatorio ambulatorio = (Ambulatorio) chave;
+            BancodeDados bd = new BancodeDados();
+            MySqlConnection conn = bd.conectar();
+            MySqlCommand cmd = new MySqlCommand();
+
+            try
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = "delete from ambulatorios " +
+                    "where nroa=@nroa";
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@nroa", ambulatorio.nroa);
+                cmd.ExecuteNonQuery();
+
+                
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                throw ex;
+            }
+            return ambulatorio;
+        
         }
 
         public object read(object chave)
@@ -60,7 +114,35 @@ namespace Clinica.DAO
 
         public object update(object objeto)
         {
-            throw new NotImplementedException();
+            Ambulatorio ambulatorio = (Ambulatorio)objeto;
+            BancodeDados bd = new BancodeDados();
+            MySqlConnection conn = bd.conectar();
+            MySqlCommand cmd = new MySqlCommand();
+
+            try
+            {
+                cmd.Connection = conn;
+
+                cmd.CommandText = @"
+                    update ambulatorios 
+                    set andar=@andar, capacidade=@capacidade
+                    where nroa = @nroa
+                ";
+
+                cmd.Prepare();
+                cmd.Parameters.AddWithValue("@nroa", ambulatorio.nroa);
+                cmd.Parameters.AddWithValue("@andar", ambulatorio.andar);
+                cmd.Parameters.AddWithValue("@capacidade", ambulatorio.capacidade);
+                
+                cmd.ExecuteNonQuery();
+
+                 MessageBox.Show("Atualização do funcionario feito com sucesso !!!");
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                throw ex;
+            }
+            return ambulatorio;
         }
     }
 }

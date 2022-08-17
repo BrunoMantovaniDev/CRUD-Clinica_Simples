@@ -59,6 +59,7 @@
             this.DeletarConsulta.TabIndex = 12;
             this.DeletarConsulta.Text = "Deletar";
             this.DeletarConsulta.UseVisualStyleBackColor = true;
+            this.DeletarConsulta.Click += new System.EventHandler(this.DeletarConsulta_Click);
             // 
             // textBox1
             // 

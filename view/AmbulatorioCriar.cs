@@ -1,4 +1,5 @@
 ﻿using Clinica.controller;
+using Clinica.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,21 @@ namespace Clinica.View
             AmbulatorioController controller = new AmbulatorioController();
             controller.listar();
             this.Hide();
+        }
+
+        private void salvar_Click(object sender, EventArgs e)
+        {
+            Ambulatorio ambulatorio = new Ambulatorio();
+
+            ambulatorio.andar = int.Parse(this.nomeValor.Text);
+            ambulatorio.capacidade = int.Parse(this.idadeValor.Text);
+           
+
+            AmbulatorioController controller = new AmbulatorioController();
+            controller.criar(ambulatorio);
+
+            this.Close();
+
         }
     }
 }

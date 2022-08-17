@@ -35,8 +35,6 @@
             this.idade_label = new System.Windows.Forms.Label();
             this.nomeValor = new System.Windows.Forms.TextBox();
             this.nome_label = new System.Windows.Forms.Label();
-            this.codigoValor = new System.Windows.Forms.TextBox();
-            this.codigo_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button5
@@ -51,12 +49,13 @@
             // 
             // salvar
             // 
-            this.salvar.Location = new System.Drawing.Point(232, 293);
+            this.salvar.Location = new System.Drawing.Point(238, 263);
             this.salvar.Name = "salvar";
             this.salvar.Size = new System.Drawing.Size(102, 23);
             this.salvar.TabIndex = 28;
             this.salvar.Text = "Salvar";
             this.salvar.UseVisualStyleBackColor = true;
+            this.salvar.Click += new System.EventHandler(this.salvar_Click);
             // 
             // titulo_label
             // 
@@ -70,7 +69,7 @@
             // 
             // idadeValor
             // 
-            this.idadeValor.Location = new System.Drawing.Point(180, 215);
+            this.idadeValor.Location = new System.Drawing.Point(186, 185);
             this.idadeValor.Name = "idadeValor";
             this.idadeValor.Size = new System.Drawing.Size(223, 20);
             this.idadeValor.TabIndex = 20;
@@ -78,7 +77,7 @@
             // idade_label
             // 
             this.idade_label.AutoSize = true;
-            this.idade_label.Location = new System.Drawing.Point(101, 222);
+            this.idade_label.Location = new System.Drawing.Point(107, 192);
             this.idade_label.Name = "idade_label";
             this.idade_label.Size = new System.Drawing.Size(67, 13);
             this.idade_label.TabIndex = 19;
@@ -86,7 +85,7 @@
             // 
             // nomeValor
             // 
-            this.nomeValor.Location = new System.Drawing.Point(180, 171);
+            this.nomeValor.Location = new System.Drawing.Point(186, 141);
             this.nomeValor.Name = "nomeValor";
             this.nomeValor.Size = new System.Drawing.Size(223, 20);
             this.nomeValor.TabIndex = 18;
@@ -94,34 +93,17 @@
             // nome_label
             // 
             this.nome_label.AutoSize = true;
-            this.nome_label.Location = new System.Drawing.Point(101, 178);
+            this.nome_label.Location = new System.Drawing.Point(107, 148);
             this.nome_label.Name = "nome_label";
             this.nome_label.Size = new System.Drawing.Size(38, 13);
             this.nome_label.TabIndex = 17;
             this.nome_label.Text = "Andar:";
             // 
-            // codigoValor
-            // 
-            this.codigoValor.Location = new System.Drawing.Point(180, 126);
-            this.codigoValor.Name = "codigoValor";
-            this.codigoValor.Size = new System.Drawing.Size(223, 20);
-            this.codigoValor.TabIndex = 16;
-            // 
-            // codigo_label
-            // 
-            this.codigo_label.AutoSize = true;
-            this.codigo_label.Location = new System.Drawing.Point(101, 133);
-            this.codigo_label.Name = "codigo_label";
-            this.codigo_label.Size = new System.Drawing.Size(43, 13);
-            this.codigo_label.TabIndex = 15;
-            this.codigo_label.Text = "Codigo:";
-            this.codigo_label.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // AmbulatorioCriar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 397);
+            this.ClientSize = new System.Drawing.Size(554, 352);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.salvar);
             this.Controls.Add(this.titulo_label);
@@ -129,8 +111,6 @@
             this.Controls.Add(this.idade_label);
             this.Controls.Add(this.nomeValor);
             this.Controls.Add(this.nome_label);
-            this.Controls.Add(this.codigoValor);
-            this.Controls.Add(this.codigo_label);
             this.Name = "AmbulatorioCriar";
             this.Text = "AmbulatorioCriar";
             this.ResumeLayout(false);
@@ -147,7 +127,5 @@
         private System.Windows.Forms.Label idade_label;
         private System.Windows.Forms.TextBox nomeValor;
         private System.Windows.Forms.Label nome_label;
-        private System.Windows.Forms.TextBox codigoValor;
-        private System.Windows.Forms.Label codigo_label;
     }
 }

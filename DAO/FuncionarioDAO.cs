@@ -125,15 +125,7 @@ namespace Clinica.DAO
             try
             {
                 cmd.Connection = conn;
-                /*cmd.CommandText = "update funcionarios " +
-                    "set nome=@nome," +
-                    "idade=@idade," +
-                    "cpf=@cpf," +
-                    "cidade=@cidade," +
-                    "salario=@salario, " +
-                    "cargo=@cargo " +
-                    "where codf=@codf";*/
-
+     
                 cmd.CommandText = @"
                     update funcionarios 
                     set nome=@nome, idade=@idade, cpf=@cpf, cidade=@cidade, salario=@salario, cargo=@cargo

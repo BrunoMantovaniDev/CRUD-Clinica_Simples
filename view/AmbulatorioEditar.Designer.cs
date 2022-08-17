@@ -31,11 +31,11 @@
             this.button5 = new System.Windows.Forms.Button();
             this.salvar = new System.Windows.Forms.Button();
             this.titulo_label = new System.Windows.Forms.Label();
-            this.idadeValor = new System.Windows.Forms.TextBox();
+            this.capacidadeValor = new System.Windows.Forms.TextBox();
             this.idade_label = new System.Windows.Forms.Label();
-            this.nomeValor = new System.Windows.Forms.TextBox();
+            this.andarValor = new System.Windows.Forms.TextBox();
             this.nome_label = new System.Windows.Forms.Label();
-            this.codigoValor = new System.Windows.Forms.TextBox();
+            this.nroaValor = new System.Windows.Forms.TextBox();
             this.codigo_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -56,6 +56,7 @@
             this.salvar.TabIndex = 37;
             this.salvar.Text = "Salvar";
             this.salvar.UseVisualStyleBackColor = true;
+            this.salvar.Click += new System.EventHandler(this.salvar_Click);
             // 
             // titulo_label
             // 
@@ -67,12 +68,12 @@
             this.titulo_label.TabIndex = 36;
             this.titulo_label.Text = "Editar Ambulatorio:";
             // 
-            // idadeValor
+            // capacidadeValor
             // 
-            this.idadeValor.Location = new System.Drawing.Point(182, 213);
-            this.idadeValor.Name = "idadeValor";
-            this.idadeValor.Size = new System.Drawing.Size(223, 20);
-            this.idadeValor.TabIndex = 35;
+            this.capacidadeValor.Location = new System.Drawing.Point(182, 213);
+            this.capacidadeValor.Name = "capacidadeValor";
+            this.capacidadeValor.Size = new System.Drawing.Size(223, 20);
+            this.capacidadeValor.TabIndex = 35;
             // 
             // idade_label
             // 
@@ -83,12 +84,12 @@
             this.idade_label.TabIndex = 34;
             this.idade_label.Text = "Capacidade:";
             // 
-            // nomeValor
+            // andarValor
             // 
-            this.nomeValor.Location = new System.Drawing.Point(182, 169);
-            this.nomeValor.Name = "nomeValor";
-            this.nomeValor.Size = new System.Drawing.Size(223, 20);
-            this.nomeValor.TabIndex = 33;
+            this.andarValor.Location = new System.Drawing.Point(182, 169);
+            this.andarValor.Name = "andarValor";
+            this.andarValor.Size = new System.Drawing.Size(223, 20);
+            this.andarValor.TabIndex = 33;
             // 
             // nome_label
             // 
@@ -99,12 +100,12 @@
             this.nome_label.TabIndex = 32;
             this.nome_label.Text = "Andar:";
             // 
-            // codigoValor
+            // nroaValor
             // 
-            this.codigoValor.Location = new System.Drawing.Point(182, 124);
-            this.codigoValor.Name = "codigoValor";
-            this.codigoValor.Size = new System.Drawing.Size(223, 20);
-            this.codigoValor.TabIndex = 31;
+            this.nroaValor.Location = new System.Drawing.Point(182, 124);
+            this.nroaValor.Name = "nroaValor";
+            this.nroaValor.Size = new System.Drawing.Size(223, 20);
+            this.nroaValor.TabIndex = 31;
             // 
             // codigo_label
             // 
@@ -124,11 +125,11 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.salvar);
             this.Controls.Add(this.titulo_label);
-            this.Controls.Add(this.idadeValor);
+            this.Controls.Add(this.capacidadeValor);
             this.Controls.Add(this.idade_label);
-            this.Controls.Add(this.nomeValor);
+            this.Controls.Add(this.andarValor);
             this.Controls.Add(this.nome_label);
-            this.Controls.Add(this.codigoValor);
+            this.Controls.Add(this.nroaValor);
             this.Controls.Add(this.codigo_label);
             this.Name = "AmbulatorioEditar";
             this.Text = "AmbulatorioEditar";
@@ -142,11 +143,11 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button salvar;
         private System.Windows.Forms.Label titulo_label;
-        private System.Windows.Forms.TextBox idadeValor;
+        private System.Windows.Forms.TextBox capacidadeValor;
         private System.Windows.Forms.Label idade_label;
-        private System.Windows.Forms.TextBox nomeValor;
+        private System.Windows.Forms.TextBox andarValor;
         private System.Windows.Forms.Label nome_label;
-        private System.Windows.Forms.TextBox codigoValor;
+        private System.Windows.Forms.TextBox nroaValor;
         private System.Windows.Forms.Label codigo_label;
     }
 }
