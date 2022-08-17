@@ -31,14 +31,14 @@
             this.EditarConsulta = new System.Windows.Forms.Button();
             this.DeletarConsulta = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.listagem = new System.Windows.Forms.DataGridView();
             this.nroa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.andar = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.capacidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.NovoConsulta = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listagem)).BeginInit();
             this.SuspendLayout();
             // 
             // EditarConsulta
@@ -66,17 +66,17 @@
             this.textBox1.Size = new System.Drawing.Size(165, 20);
             this.textBox1.TabIndex = 11;
             // 
-            // dataGridView1
+            // listagem
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.listagem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listagem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nroa,
             this.andar,
             this.capacidade});
-            this.dataGridView1.Location = new System.Drawing.Point(80, 105);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(501, 184);
-            this.dataGridView1.TabIndex = 10;
+            this.listagem.Location = new System.Drawing.Point(80, 105);
+            this.listagem.Name = "listagem";
+            this.listagem.Size = new System.Drawing.Size(501, 184);
+            this.listagem.TabIndex = 10;
             // 
             // nroa
             // 
@@ -132,13 +132,13 @@
             this.Controls.Add(this.EditarConsulta);
             this.Controls.Add(this.DeletarConsulta);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.listagem);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NovoConsulta);
             this.Controls.Add(this.button1);
             this.Name = "AmbulatoriosView";
             this.Text = "Ambulatorios";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,7 +149,7 @@
         private System.Windows.Forms.Button EditarConsulta;
         private System.Windows.Forms.Button DeletarConsulta;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView listagem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button NovoConsulta;
         private System.Windows.Forms.Button button1;
