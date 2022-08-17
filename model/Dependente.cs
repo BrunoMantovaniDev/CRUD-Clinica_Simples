@@ -14,6 +14,6 @@ namespace Clinica.Model
 
         public string nascimento { get; set; }
 
-        public int codf { get; set; }
+        public Funcionario codf { get; set; }
     }
 }
