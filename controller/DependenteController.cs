@@ -20,21 +20,21 @@ namespace Clinica.controller
             tela.Show();
 
         }
-/*
+
         public void preparaEdicao(object objeto)
         {
             FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
             ArrayList funcionario;
             funcionario = funcionarioDAO.all();
             
-            Dependente dep = (Dependente)objeto;
+            //Dependente dep = (Dependente)objeto;
             
-            dep.funcionario = (Funcionario)funcionarioDAO.read(dep.funcionario);
+            
             DependenteEditar tela = new DependenteEditar(funcionario, objeto);
             tela.Show();
 
         }
-*/
+
         public void preparaCriacao()
         {
             FuncionarioDAO funcionarioDAO = new FuncionarioDAO();
@@ -69,6 +69,16 @@ namespace Clinica.controller
             ArrayList todos = dependenteDAO.all();
             DependenteView listagem = new DependenteView(todos);
             listagem.Show();
+        }
+
+        public void deletar(object objeto)
+        {
+            Dependente dep = (Dependente)objeto;
+
+            DependenteDAO dependenteDAO = new DependenteDAO();
+            dependenteDAO.delete(dep);
+
+            new DependenteView(dependenteDAO.all()).Show();
         }
     }
 }

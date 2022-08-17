@@ -32,14 +32,14 @@
             this.DeletarConsulta = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.listagem = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.NovoConsulta = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.codd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nascimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Funcionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.NovoConsulta = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.listagem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,15 +51,17 @@
             this.EditarConsulta.TabIndex = 13;
             this.EditarConsulta.Text = "Editar";
             this.EditarConsulta.UseVisualStyleBackColor = true;
+            this.EditarConsulta.Click += new System.EventHandler(this.EditarConsulta_Click);
             // 
             // DeletarConsulta
             // 
-            this.DeletarConsulta.Location = new System.Drawing.Point(322, 337);
+            this.DeletarConsulta.Location = new System.Drawing.Point(362, 337);
             this.DeletarConsulta.Name = "DeletarConsulta";
             this.DeletarConsulta.Size = new System.Drawing.Size(75, 23);
             this.DeletarConsulta.TabIndex = 12;
             this.DeletarConsulta.Text = "Deletar";
             this.DeletarConsulta.UseVisualStyleBackColor = true;
+            this.DeletarConsulta.Click += new System.EventHandler(this.DeletarConsulta_Click);
             // 
             // textBox1
             // 
@@ -82,6 +84,35 @@
             this.listagem.Size = new System.Drawing.Size(751, 184);
             this.listagem.TabIndex = 10;
             this.listagem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(216, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Filtrar:";
+            // 
+            // NovoConsulta
+            // 
+            this.NovoConsulta.Location = new System.Drawing.Point(561, 337);
+            this.NovoConsulta.Name = "NovoConsulta";
+            this.NovoConsulta.Size = new System.Drawing.Size(75, 23);
+            this.NovoConsulta.TabIndex = 8;
+            this.NovoConsulta.Text = "Novo";
+            this.NovoConsulta.UseVisualStyleBackColor = true;
+            this.NovoConsulta.Click += new System.EventHandler(this.NovoConsulta_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(18, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Voltar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // codd
             // 
@@ -111,35 +142,6 @@
             this.codf.HeaderText = "Codigo Funcionario";
             this.codf.Name = "codf";
             this.codf.Width = 150;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(216, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Filtrar:";
-            // 
-            // NovoConsulta
-            // 
-            this.NovoConsulta.Location = new System.Drawing.Point(482, 337);
-            this.NovoConsulta.Name = "NovoConsulta";
-            this.NovoConsulta.Size = new System.Drawing.Size(75, 23);
-            this.NovoConsulta.TabIndex = 8;
-            this.NovoConsulta.Text = "Novo";
-            this.NovoConsulta.UseVisualStyleBackColor = true;
-            this.NovoConsulta.Click += new System.EventHandler(this.NovoConsulta_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(18, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Voltar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // DependenteView
             // 

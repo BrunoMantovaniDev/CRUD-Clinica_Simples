@@ -48,7 +48,6 @@ namespace Clinica.View
             dep.nome = this.nomeValor.Text;
             dep.nascimento = this.dataHoraConsulta.Value.ToString();
 
-            //DateTime dataHora = this.dataHoraConsulta.Value;
 
             Funcionario f = new Funcionario();
 

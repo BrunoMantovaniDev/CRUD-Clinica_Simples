@@ -112,8 +112,46 @@ namespace Clinica.DAO
 
         public object read(object chave)
         {
-            throw new NotImplementedException();
+            string sql = "select * from funcionarios where codf = @codf";
+            BancodeDados bd = new BancodeDados();
+            Funcionario funcionario = (Funcionario)chave;
+
+            Funcionario doBanco = new Funcionario();
+            
+            MySqlCommand cmd = new MySqlCommand(sql, bd.conectar());
+           // int codf;
+            cmd.Prepare();
+            cmd.Parameters.AddWithValue("@codf", funcionario.codf);
+            try
+            {
+                MySqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+
+                    doBanco.codf = int.Parse(rdr[0].ToString());
+                    doBanco.nome = rdr[1].ToString();
+                    doBanco.idade = int.Parse(rdr[2].ToString());
+                    doBanco.cpf = rdr[3].ToString();
+                    doBanco.cidade = rdr[4].ToString();
+                    doBanco.salario = decimal.Parse(rdr[5].ToString());
+                    doBanco.cargo = rdr[5].ToString();
+
+                   // int.TryParse(rdr[6].ToString(), out codf);
+                   // doBanco.codf = codf;
+
+                }
+                rdr.Close();
+            }
+            catch
+            {
+                throw;
+            }
+
+
+
+            return doBanco;
         }
+    
 
         public object update(object objeto)
         {
