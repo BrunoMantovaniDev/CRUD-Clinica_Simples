@@ -46,5 +46,13 @@ namespace Clinica.View
             inicio.Show();
             this.Close();
         }
+
+        private void NovoConsulta_Click(object sender, EventArgs e)
+        {
+            AmbulatorioCriar amb = new AmbulatorioCriar();
+            amb.Show();
+            this.Close();
+            
+        }
     }
 }

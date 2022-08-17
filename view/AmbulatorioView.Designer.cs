@@ -113,6 +113,7 @@
             this.NovoConsulta.TabIndex = 8;
             this.NovoConsulta.Text = "Novo";
             this.NovoConsulta.UseVisualStyleBackColor = true;
+            this.NovoConsulta.Click += new System.EventHandler(this.NovoConsulta_Click);
             // 
             // button1
             // 
@@ -124,7 +125,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // AmbulatoriosView
+            // AmbulatorioView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -136,7 +137,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NovoConsulta);
             this.Controls.Add(this.button1);
-            this.Name = "AmbulatoriosView";
+            this.Name = "AmbulatorioView";
             this.Text = "Ambulatorios";
             ((System.ComponentModel.ISupportInitialize)(this.listagem)).EndInit();
             this.ResumeLayout(false);

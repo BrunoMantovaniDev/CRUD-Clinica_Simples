@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Clinica.controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,13 @@ namespace Clinica.View
         public AmbulatorioCriar()
         {
             InitializeComponent();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AmbulatorioController controller = new AmbulatorioController();
+            controller.listar();
+            this.Hide();
         }
     }
 }
