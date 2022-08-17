@@ -36,6 +36,7 @@
             this.pacientes_combo = new System.Windows.Forms.ComboBox();
             this.medicos_combo = new System.Windows.Forms.ComboBox();
             this.dataHoraConsulta = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button2
@@ -110,12 +111,23 @@
             this.dataHoraConsulta.Name = "dataHoraConsulta";
             this.dataHoraConsulta.Size = new System.Drawing.Size(263, 20);
             this.dataHoraConsulta.TabIndex = 56;
+            this.dataHoraConsulta.ValueChanged += new System.EventHandler(this.dataHoraConsulta_ValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(158, 272);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.TabIndex = 63;
+            this.label4.Text = "Data / Hora";
             // 
             // ConsultasCriar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.salvar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -140,5 +152,6 @@
         private System.Windows.Forms.ComboBox pacientes_combo;
         private System.Windows.Forms.ComboBox medicos_combo;
         private System.Windows.Forms.DateTimePicker dataHoraConsulta;
+        private System.Windows.Forms.Label label4;
     }
 }

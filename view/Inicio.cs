@@ -72,8 +72,9 @@ namespace Clinica
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DependenteView TelaDependente = new DependenteView();
-            TelaDependente.Show();
+            DependenteController dependentesController = new DependenteController();
+            dependentesController.listar();
+
             this.Hide();
         }
     }

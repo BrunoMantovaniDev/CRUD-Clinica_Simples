@@ -108,12 +108,14 @@
   <ItemGroup>
     <Compile Include="controller\AmbulatorioController.cs" />
     <Compile Include="controller\ConsultaController.cs" />
+    <Compile Include="controller\DependenteController.cs" />
     <Compile Include="controller\FuncionarioController.cs" />
     <Compile Include="controller\IController.cs" />
     <Compile Include="controller\MedicoController.cs" />
     <Compile Include="DAO\AmbulatorioDAO.cs" />
     <Compile Include="DAO\BancodeDados.cs" />
     <Compile Include="DAO\ConsultaDAO.cs" />
+    <Compile Include="DAO\DependenteDAO.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\IDAO.cs" />
     <Compile Include="DAO\MedicoDAO.cs" />

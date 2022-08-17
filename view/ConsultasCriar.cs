@@ -58,5 +58,10 @@ namespace Clinica.View
             consultaController.listar();
             this.Close();
         }
+
+        private void dataHoraConsulta_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
