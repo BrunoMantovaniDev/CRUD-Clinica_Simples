@@ -134,11 +134,11 @@
     <Compile Include="view\AmbulatorioEditar.Designer.cs">
       <DependentUpon>AmbulatorioEditar.cs</DependentUpon>
     </Compile>
-    <Compile Include="view\AmbulatoriosView.cs">
+    <Compile Include="view\AmbulatorioView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="view\AmbulatoriosView.Designer.cs">
-      <DependentUpon>AmbulatoriosView.cs</DependentUpon>
+    <Compile Include="view\AmbulatorioView.Designer.cs">
+      <DependentUpon>AmbulatorioView.cs</DependentUpon>
     </Compile>
     <Compile Include="view\ConsultasCriar.cs">
       <SubType>Form</SubType>
@@ -247,8 +247,8 @@
     <EmbeddedResource Include="view\AmbulatorioEditar.resx">
       <DependentUpon>AmbulatorioEditar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="view\AmbulatoriosView.resx">
-      <DependentUpon>AmbulatoriosView.cs</DependentUpon>
+    <EmbeddedResource Include="view\AmbulatorioView.resx">
+      <DependentUpon>AmbulatorioView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\ConsultasCriar.resx">
       <DependentUpon>ConsultasCriar.cs</DependentUpon>

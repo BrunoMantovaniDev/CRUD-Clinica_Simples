@@ -1,6 +1,6 @@
 ﻿namespace Clinica.View
 {
-    partial class AmbulatoriosView
+    partial class AmbulatorioView
     {
         /// <summary>
         /// Required designer variable.

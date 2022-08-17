@@ -12,26 +12,26 @@ using System.Windows.Forms;
 
 namespace Clinica.View
 {
-    public partial class AmbulatoriosView : Form
+    public partial class AmbulatorioView : Form
     {
-        public AmbulatoriosView()
+        public AmbulatorioView()
         {
             InitializeComponent();
         }
 
-        public AmbulatoriosView(ArrayList ambulatorio)
+        public AmbulatorioView(ArrayList ambulatorio)
         {
             InitializeComponent();
 
 
             int x = 0;
 
-            foreach (Ambulatorio f in ambulatorio)
+            foreach (Ambulatorio amb in ambulatorio)
             {
                 this.listagem.Rows.Add();
-                this.listagem.Rows[x].Cells[0].Value = f.nroa;
-                this.listagem.Rows[x].Cells[1].Value = f.andar;
-                this.listagem.Rows[x].Cells[2].Value = f.capacidade;
+                this.listagem.Rows[x].Cells[0].Value = amb.nroa;
+                this.listagem.Rows[x].Cells[1].Value = amb.andar;
+                this.listagem.Rows[x].Cells[2].Value = amb.capacidade;
                 
                 x++;
 

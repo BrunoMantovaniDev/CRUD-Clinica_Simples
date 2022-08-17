@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Clinica.DAO;
+using Clinica.View;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +11,12 @@ namespace Clinica.controller
 {
     internal class AmbulatorioController
     {
+        public void listar()
+        {
+            AmbulatorioDAO ambulatorioDAO = new AmbulatorioDAO();
+            ArrayList lista = ambulatorioDAO.all();
+            AmbulatorioView ambulatorio = new AmbulatorioView(lista);
+            ambulatorio.Show();
+        }
     }
 }
