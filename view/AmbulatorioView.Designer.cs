@@ -49,6 +49,7 @@
             this.EditarConsulta.TabIndex = 13;
             this.EditarConsulta.Text = "Editar";
             this.EditarConsulta.UseVisualStyleBackColor = true;
+            this.EditarConsulta.Click += new System.EventHandler(this.EditarConsulta_Click);
             // 
             // DeletarConsulta
             // 

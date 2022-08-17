@@ -54,5 +54,12 @@ namespace Clinica.View
             this.Close();
             
         }
+
+        private void EditarConsulta_Click(object sender, EventArgs e)
+        {
+            AmbulatorioEditar amb = new AmbulatorioEditar();
+            amb.Show();
+            this.Close();
+        }
     }
 }
