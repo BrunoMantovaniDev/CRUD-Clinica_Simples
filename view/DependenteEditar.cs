@@ -15,6 +15,7 @@ namespace Clinica.View
 {
     public partial class DependenteEditar : Form
     {
+        public int codigoD { get; set; }
         public DependenteEditar(ArrayList funcionario, object objeto)
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace Clinica.View
 
             Dependente dep = (Dependente)objeto;
 
-
+            codigoD = dep.codd;
             this.funcionario_combo.Text = dep.funcionario.codf + " - " + dep.funcionario.nome;
             this.dataDependente.Text = dep.nascimento;
             this.nomeValor.Text = dep.nome;
@@ -36,6 +37,7 @@ namespace Clinica.View
             string funcionario = this.funcionario_combo.SelectedItem.ToString();
 
             Dependente dep = new Dependente();
+            dep.codd = codigoD;
             dep.nome = this.nomeValor.Text;
             dep.nascimento = this.dataDependente.Value.ToString();
 

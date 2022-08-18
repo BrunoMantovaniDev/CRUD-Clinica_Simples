@@ -133,8 +133,8 @@ namespace Clinica.DAO
                 cmd.Connection = conn;
                 cmd.CommandText = @"
                                 update dependetes
-                                set nome=@nome, nascimento=@nascimento, codf=codf
-                                where @codd = codd 
+                                set nome=@nome, nascimento=@nascimento, codf=@codf
+                                where codd = @codd 
                 ";
                 cmd.Prepare();
                 cmd.Parameters.AddWithValue("@codd", dependente.codd);
